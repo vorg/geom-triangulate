@@ -1,6 +1,3 @@
-//similar packages
-//https://github.com/hughsk/unindex-mesh
-
 var clone = require('clone');
 
 function triangulateGeometry(geometry) {
