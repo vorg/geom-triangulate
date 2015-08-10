@@ -1,0 +1,34 @@
+{
+  "name": "geom-triangulate",
+  "version": "1.0.0",
+  "description": "Splits quad or polygon faces into triangles",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Marcin Ignac",
+    "email": "marcin.ignac@gmail.com",
+    "url": "https://github.com/vorg"
+  },
+  "dependencies": {
+    "clone": "^1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "3d,",
+    "geometry,",
+    "geom,",
+    "webgl,",
+    "triangulation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vorg/geom-triangulate.git"
+  },
+  "homepage": "https://github.com/vorg/geom-triangulate",
+  "bugs": {
+    "url": "https://github.com/vorg/geom-triangulate/issues"
+  }
+}
