@@ -25,7 +25,7 @@ function triangulate(geometryOrFaces) {
         return triangulateGeometry(geometryOrFaces);
     }
     else {
-        return triangulateFaces(faces);
+        return triangulateFaces(geometryOrFaces);
     }
 }
 
