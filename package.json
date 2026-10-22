@@ -22,26 +22,30 @@
   ],
   "sideEffects": false,
   "type": "module",
-  "exports": "./index.js",
-  "main": "index.js",
-  "types": "types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./index.js"
+    }
+  },
+  "main": "./index.js",
+  "types": "./types/index.d.ts",
   "scripts": {
     "dev": "snowdev dev",
     "release": "snowdev release"
   },
-  "dependencies": {
-    "pex-math": "^4.1.0",
-    "pex-random": "^2.0.0"
-  },
   "devDependencies": {
-    "es-module-shims": "^1.8.3",
-    "pex-context": "^3.0.0-alpha.3",
-    "pex-gui": "^3.0.0",
-    "primitive-geometry": "^2.10.0",
+    "es-module-shims": "^2.8.4",
+    "pex-context": "^4.1.0",
+    "pex-gui": "^3.3.0",
+    "pex-math": "^4.4.0",
+    "pex-random": "^3.0.0",
+    "primitive-geometry": "^3.3.0",
     "primitive-plane": "^2.0.1"
   },
+  "packageManager": "npm@11.3.0",
   "engines": {
-    "node": ">=20.0.0",
-    "npm": ">=9.6.4"
+    "node": ">=24.0.0",
+    "snowdev": ">=3.0.0-alpha.3"
   }
 }

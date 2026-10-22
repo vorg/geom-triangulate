@@ -1,5 +1,5 @@
 import triangulate from "../index.js";
-import { box } from "primitive-geometry";
+import { polygonPath, cubePolygons } from "primitive-geometry";
 
 import createContext from "pex-context";
 import { mat4 } from "pex-math";
@@ -58,30 +58,8 @@ const getPolygon = (sides) => {
 const POLYGON_SIDES = 6;
 
 const geometries = {
-  polygon: {
-    positions: getPolygon(POLYGON_SIDES),
-    cells: [Array.from({ length: POLYGON_SIDES }, (_, i) => i)],
-  },
-  box: {
-    positions: [
-      [-0.5, 0.5, 0.5],
-      [-0.5, -0.5, 0.5],
-      [0.5, -0.5, 0.5],
-      [0.5, 0.5, 0.5],
-      [0.5, 0.5, -0.5],
-      [0.5, -0.5, -0.5],
-      [-0.5, -0.5, -0.5],
-      [-0.5, 0.5, -0.5],
-    ],
-    cells: [
-      [0, 1, 2, 3], // +z
-      [3, 2, 5, 4], // +x
-      [4, 5, 6, 7], // -z
-      [7, 6, 1, 0], // -x
-      [7, 0, 3, 4], // +y
-      [1, 6, 5, 2], // -y
-    ],
-  },
+  polygon: polygonPath({ sides: POLYGON_SIDES }),
+  box: cubePolygons(),
 };
 console.log(geometries);
 
